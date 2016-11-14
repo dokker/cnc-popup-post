@@ -1,5 +1,5 @@
 <?php
-namespace cncTTS;
+namespace cncPP;
 
 class ContentType {
 	public $type;
