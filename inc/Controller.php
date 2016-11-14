@@ -6,6 +6,9 @@ class Controller {
 		$this->plugin_path = plugin_dir_path(dirname(__FILE__));
 		$this->plugin_url = plugin_dir_url(dirname(__FILE__));
 
+		$this->model = new \cncEV\Model();
+		$this->view = new \cncEV\View();
+
 		add_action('wp_ajax_get_post_content', [$this, 'ajax_get_post_content']);
 		add_action('wp_ajax_nopriv_get_post_content', [$this, 'ajax_get_post_content']);
 		add_action('wp_enqueue_scripts', [$this, 'registerScripts']);
@@ -18,7 +21,10 @@ class Controller {
 	{
 		check_ajax_referer('cncpp_nonce');
 		(int) $id = $_REQUEST['id'];
-		$post_content = '';
+		$postdata = $this->model->getPostData($id);
+		$this->view->assign('post_title', $postdata['title']);
+		$this->view->assign('post_content', $postdata['content']);
+		$post_content = $this->view->render('popup-content');
 		wp_send_json($post_content);
 		wp_die();
 	}
