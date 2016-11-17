@@ -6,8 +6,8 @@ class Controller {
 		$this->plugin_path = plugin_dir_path(dirname(__FILE__));
 		$this->plugin_url = plugin_dir_url(dirname(__FILE__));
 
-		$this->model = new \cncEV\Model();
-		$this->view = new \cncEV\View();
+		$this->model = new \cncPP\Model();
+		$this->view = new \cncPP\View();
 
 		add_action('wp_ajax_get_post_content', [$this, 'ajax_get_post_content']);
 		add_action('wp_ajax_nopriv_get_post_content', [$this, 'ajax_get_post_content']);
