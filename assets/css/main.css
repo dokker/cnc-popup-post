@@ -1,0 +1,26 @@
+.cnc-dialog-content.opened {
+	margin: 20px auto;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.cnc-popup-content {
+	position: relative;
+	z-index: 10;
+	width: auto;
+	max-width: 600px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 20px;
+}
+
+.cnc-dialog-content.opened .overlay {
+	background: #222;
+	opacity: 0.8;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

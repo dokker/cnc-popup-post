@@ -35,7 +35,9 @@ class Controller {
 	 */
 	public function registerScripts()
 	{
+		wp_enqueue_style('cnc-popup-post-main', $this->plugin_url . 'assets/css/main.css');
 		wp_register_script('cnc-popup-post-main', $this->plugin_url . 'assets/js/main.js', array('jquery'), '1', true);
+		wp_enqueue_script('cnc-popup-post-main');
 		// Prepare script for use AJAX
 		wp_localize_script( 'cnc-popup-post-main', 'cnc_popup_post_obj', array(
 			'ajax_url' => admin_url( 'admin-ajax.php' ),
