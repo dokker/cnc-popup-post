@@ -23,7 +23,7 @@ class Controller {
 		(int) $id = $_REQUEST['id'];
 		$postdata = $this->model->getPostData($id);
 		$this->view->assign('post_title', $postdata['title']);
-		$this->view->assign('post_content', do_shortcode($postdata['content']));
+		$this->view->assign('post_content', wpautop(apply_filters('the_content', $postdata['content'])));
 		$post_content = $this->view->render('popup-content');
 		wp_send_json($post_content);
 		wp_die();
