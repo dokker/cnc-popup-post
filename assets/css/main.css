@@ -1,15 +1,19 @@
-.cnc-dialog-content.opened {
+.cnc-dialog-content {
+	display: none;
+	position: absolute;
 	margin: 20px auto;
 	width: 100%;
-	position: absolute;
 	top: 0;
+}
+.cnc-dialog-content.opened {
+	display: block;
 }
 
 .cnc-popup-content {
 	position: relative;
 	z-index: 10;
 	width: auto;
-	max-width: 600px;
+	max-width: 800px;
 	margin: 0 auto;
 	background: #fff;
 	padding: 40px 25px 25px;
