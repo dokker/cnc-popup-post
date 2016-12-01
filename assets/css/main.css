@@ -12,7 +12,7 @@
 	max-width: 600px;
 	margin: 0 auto;
 	background: #fff;
-	padding: 20px;
+	padding: 40px 25px 25px;
 }
 
 .cnc-dialog-content.opened .overlay {
@@ -23,4 +23,38 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+.cnc-popup-content .popup-close {
+	color: #333;
+	overflow: visible;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+	display: block;
+	outline: none;
+	padding: 0;
+	z-index: 1046;
+	box-shadow: none;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-decoration: none;
+	text-align: center;
+	opacity: .65;
+	font-style: normal;
+	font-size: 28px;
+	font-family: Arial,Baskerville,monospace;
+
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
 }

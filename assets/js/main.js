@@ -12,6 +12,9 @@
 	$("body").on('click', '.cnc-dialog-content .overlay', function() {
 		$(this).parent().removeClass("opened");
 	});
+	$("body").on('click', '.cnc-popup-content .popup-close', function() {
+		$(this).parent().parent().removeClass("opened");
+	});
 
 	function openPopup(content) {
 		$dialog = $('.cnc-dialog-content');
